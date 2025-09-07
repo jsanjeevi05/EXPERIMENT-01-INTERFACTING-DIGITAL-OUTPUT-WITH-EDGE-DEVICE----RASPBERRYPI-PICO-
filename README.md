@@ -1,7 +1,7 @@
 # EXPERIMENT-01-INTERFACTING-DIGITAL-OUTPUT-WITH-EDGE-DEVICE---(RASPBERRYPI-PICO)
-### NAME 
-### DEPARTMENT 
-### ROLL NO 
+### NAME : SANJEEVI J
+### DEPARTMENT : IOT
+### ROLL NO : 212222110040
 ### DATE OF EXPERIMENT 
 
 ### AIM
@@ -40,26 +40,90 @@ Connect the cathode (shorter leg) of the LED to GND (ground).
 
 
 ## PROGRAM (MicroPython)
+FIG1
+```
+from machine import Pin
+import time
+led=Pin(0,Pin.OUT)
+while True:
+    led.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led.value(0)
+    print("LED is OFF")
+    time.sleep(1)
+```
+FIG2
+```
+from machine import Pin
+import time
+led1=Pin(0,Pin.OUT)
+led2=Pin(1,Pin.OUT)
+led3=Pin(2,Pin.OUT)
+while True:
+    led1.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led1.value(0)
+    print("LED is OFF")
+    time.sleep(1)
+    led2.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led2.value(0)
+    print("LED is OFF")
+    time.sleep(1)
+    led3.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led3.value(0)
+    print("LED is OFF")
+    time.sleep(1)
+```
+FIG3
+```
+from machine import Pin
+import time
+led1=Pin(0,Pin.OUT)
+led2=Pin(1,Pin.OUT)
+led3=Pin(2,Pin.OUT)
+buzzer=Pin(2,Pin.OUT)
+while True:
+    led1.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led1.value(0)
+    print("LED is OFF")
+    time.sleep(1)
+    led2.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led2.value(0)
+    print("LED is OFF")
+    time.sleep(1)
+    led3.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    led3.value(0)
+    print("LED is OFF")
+    time.sleep(1)
+    buzzer.value(1)
+    print("LED is ON")
+    time.sleep(1)
+    buzzer.value(0)
+    print("LED is OFF")
+    time.sleep(1)
 ```
 
+# OUTPUT  
+# FIGURE -01  
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 161209" src="https://github.com/user-attachments/assets/bc15af6d-cb5f-4b36-b395-d2d9e003eb71" />
 
- 
+#  FIGURE -02 
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 160012" src="https://github.com/user-attachments/assets/686b9d8e-f2f7-4c4d-8489-9e03e398ade3" />
 
+# FIGURE -03 
+<img width="1920" height="1080" alt="Screenshot 2025-08-09 161036" src="https://github.com/user-attachments/assets/847f6ca7-37d9-48dd-9a3f-551ad2b150d2" />
 
-
- 
-````
-
-### OUPUT  
-
-
-# FIGURE -02 ADD TITILE HERE 
-
-#  FIGURE -03 ADD TITILE HERE 
-
-# FIGURE -04 ADD TITLE HERE 
-
-
- 
 ## RESULTS
 The LED connected to the Raspberry Pi Pico successfully turns ON and OFF at  user defined time  confirming the proper interfacing of a digital output.
